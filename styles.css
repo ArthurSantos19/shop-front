@@ -17,6 +17,12 @@ body {
     align-items: center;
 }
 
+/* @media screen and (max-width: 768px) {
+    body {
+        font-size: 1vh;
+    }
+} */
+
 /* Links */
 a {
     text-decoration: none;
@@ -31,11 +37,31 @@ img {
 }
 
 h2 {
-    font-size: 1vw;
+    font-size: 1.3vw;
 }
 
 p {
-    font-size: 0.85vw;
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 1160px) {
+    p {
+        font-size: 1.3vw;
+    }
+
+    h2 {
+        font-size: 1.6vw;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    p {
+        font-size: 1.5vw;
+    }
+
+    h2 {
+        font-size: 1.9vw;
+    }
 }
 
 /* Variáveis CSS */
@@ -43,6 +69,7 @@ p {
     --cor-primaria:  #3c4a90;
     --cor-secundaria: #ff9800;
     --cor-button: #6A5ACD;
+    --cor-gray: #C0C0C0;
     --espacamento: 1rem;
 }
 
@@ -189,24 +216,32 @@ p {
 
 @media screen and (max-width: 768px) {
     .info-container {
-        flex-direction: column; /* Altera a direção dos elementos para ficarem empilhados em telas menores */
+        flex-direction: column; 
     }
 
     .image-info {
-        width: 100%; /* Ocupa toda a largura disponível em telas menores */
-        height: 30vh; /* Altura ajustada de acordo com a necessidade */
+        width: 100%; 
+        height: 30vh;
     }
 
     .more-info {
-        width: 100%; /* Ocupa toda a largura disponível em telas menores */
-        padding: 0 20px; /* Adiciona um espaçamento horizontal para melhorar a aparência em telas menores */
-        align-items: center; /* Centraliza os elementos verticalmente */
-        text-align: center; /* Centraliza o texto */
+        width: 100%; 
+        padding: 0 20px; 
+        align-items: center; 
+        text-align: center;
     }
 
     .button-contain {
-        width: 40%; /* Ajusta a largura do botão para caber em telas menores */
-        margin-top: 16px; /* Espaçamento entre a div de texto e o botão */
+        width: 40%; 
+        margin-top: 16px;
+        font-size: 1.4vw;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .button-contain {
+        font-size: 1.4vw;
+        width: 40%;
     }
 }
 
@@ -257,7 +292,7 @@ p {
 
 .card:hover {
     transform: translateY(-5px); /* Deslocamento vertical para cima (levemente para frente) */
-    box-shadow: 0 4px 8px var(--cor-button);
+    box-shadow: 0 4px 8px var(--cor-gray);
     border-radius: 10px;
 }
 
@@ -278,5 +313,61 @@ p {
     height: 10%;
     font-family: 'Montserrat', sans-serif;
 }
+
+.adote-container {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 100%;
+    min-height: 50vh;
+    background-color: #F7C6A1;
+}
+
+.container-ado {
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+    width: 84%;
+    height: 100%;
+    background-color: #C0C0C0;
+    gap: 2rem;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    width: 30%;
+    background-color: #6A5ACD;
+}
+
+.imagem-adt {
+    width: 90%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+.dog-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    height: 100%;
+    border-radius: 8px;
+    background-size: contain;
+    background-position: left center;
+    background-color: green;
+    background-repeat: no-repeat;
+}
+
+.dog-container-info {
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 20%; /* Defina a largura desejada para o dog-container-info */
+}
+  
 
 
