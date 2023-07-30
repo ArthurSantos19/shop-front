@@ -30,10 +30,19 @@ img {
     height: auto;
 }
 
+h2 {
+    font-size: 1vw;
+}
+
+p {
+    font-size: 0.85vw;
+}
+
 /* Variáveis CSS */
 :root {
     --cor-primaria:  #3c4a90;
     --cor-secundaria: #ff9800;
+    --cor-button: #6A5ACD;
     --espacamento: 1rem;
 }
 
@@ -99,7 +108,7 @@ img {
 .slide-container {
     padding-top: 10vh;
     width: 100%;
-    height: 50vh;
+    height: 68vh;
     margin-top: 2px;
 }
 
@@ -111,3 +120,163 @@ img {
     background-size: cover;
     background-position: center;
 }
+
+/* INFO  */
+
+.info-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 40vh;
+    margin-top: 12px;
+}
+
+.image-info {
+    width: 60%;
+    height: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.more-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 42%;
+    height: 90%;
+
+    font-family: 'Montserrat', sans-serif;
+
+    h3 {
+        font-size: small;
+    }
+   
+}
+
+.text-div {
+    width: 66%;
+    margin-top: 8px;
+}
+
+.div-button {
+    display: flex;
+}
+
+.button-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 14%;
+    padding: 10px;
+    background-color: white;
+    color: var(--cor-button);
+    border: solid 1px var(--cor-button);
+    border-radius: 4px;
+    font-size: 0.8vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 22px;
+    text-align: center;
+}
+
+.button-contain:hover {
+    color: white;
+    background-color: var(--cor-button);
+}
+
+@media screen and (max-width: 768px) {
+    .info-container {
+        flex-direction: column; /* Altera a direção dos elementos para ficarem empilhados em telas menores */
+    }
+
+    .image-info {
+        width: 100%; /* Ocupa toda a largura disponível em telas menores */
+        height: 30vh; /* Altura ajustada de acordo com a necessidade */
+    }
+
+    .more-info {
+        width: 100%; /* Ocupa toda a largura disponível em telas menores */
+        padding: 0 20px; /* Adiciona um espaçamento horizontal para melhorar a aparência em telas menores */
+        align-items: center; /* Centraliza os elementos verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .button-contain {
+        width: 40%; /* Ajusta a largura do botão para caber em telas menores */
+        margin-top: 16px; /* Espaçamento entre a div de texto e o botão */
+    }
+}
+
+
+.shop-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    height: 50vh;
+    margin-top: 50px;
+}
+
+.header-shop {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 80%;
+    height: 100%;
+    /* background-color: #ff9800; */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    padding: 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Deslocamento vertical para cima (levemente para frente) */
+    box-shadow: 0 4px 8px var(--cor-button);
+    border-radius: 10px;
+}
+
+.card img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.footer-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    height: 10%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
