@@ -9,10 +9,22 @@ const data = {
     },
 
     {
-      "nome": "Dory",
-      "idade": "3 anos",
+      "nome": "Marley",
+      "idade": "1 ano",
       "raca": "Vira-lata",
-      "imagem": "pastor.jpg"
+      "imagem": "marley.jpg"
+    },
+    {
+      "nome": "Ragnar",
+      "idade": "4 anos",
+      "raca": "Vira-lata",
+      "imagem": "ragnar.jpg"
+    },
+    {
+      "nome": "Kim",
+      "idade": "4 anos",
+      "raca": "Vira-lata",
+      "imagem": "kim.jpg"
     }
   ]
 };
