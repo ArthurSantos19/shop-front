@@ -56,7 +56,7 @@ p {
 
 @media screen and (max-width: 770px) {
     p {
-        font-size: 1.5vw;
+        font-size: 1.6vw;
     }
 
     h2 {
@@ -131,6 +131,78 @@ p {
     color: #F7C6A1;
 }
 
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+}
+
+.bar {
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.menu-mobile {
+    display: none; /* Inicialmente, o menu mobile estará oculto */
+    flex-direction: column;
+    gap: 2rem; /* Adicione um espaçamento entre os links do menu mobile, se necessário */
+}
+
+.menu-mobile-container {
+    display: none;
+    position: absolute;
+   
+}
+
+@media screen and (max-width: 760px) {
+    /* Mostra o container com o ícone do menu mobile e o menu mobile quando a tela for menor que 760px */
+    .menu-mobile-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Esconde o menu-container original quando a tela for menor que 760px */
+    .menu-container {
+        display: none;
+    }
+
+    /* Mostra o ícone do menu mobile quando a tela for menor que 760px */
+    .hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Adicione alinhamento vertical ao ícone */
+        justify-content: center; /* Adicione alinhamento horizontal ao ícone */
+        
+    }
+
+    /* Mostra o menu mobile quando a classe 'active' estiver presente */
+    .menu-mobile.active {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: var(--cor-primaria);
+    }
+    .menu-mobile a:hover {
+        color: var(--cor-secundaria);
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .header {
+        gap: 4rem;
+    }
+    
+}
+
 /* SECTION SLIDE */
 
 .slide-container {
@@ -166,6 +238,19 @@ p {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+@media screen and (max-width: 500px) {
+    .image-info {
+        display: none;
+    }
+
+    .info-container {
+        margin-top: 70px;
+    }
+
+}
+
+
 
 .more-info {
     display: flex;
@@ -279,6 +364,32 @@ p {
     /* background-color: #ff9800; */
 }
 
+@media screen and (max-width: 776px) {
+    .container-card {
+        /* max-width: 100%;
+        height: 80%; */
+        gap: 0;
+    }
+
+    .button-contain {
+        font-size: 1.7vw;
+        width: 40%;
+        height: 20%;
+    }
+
+    
+}
+
+@media screen and (max-width: 456px) {
+    .button-contain {
+        font-size: 2.2vw;
+        width: 34%;
+        height: 20%;
+    }
+}
+
+
+
 .card {
     display: flex;
     flex-direction: column;
@@ -290,6 +401,31 @@ p {
     transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
 }
+
+@media screen and (max-width: 776px) {
+    .container-card { 
+        height: auto; 
+        gap: 20px; 
+    }
+
+    .card {
+        width: 90%; 
+        max-width: 300px;
+        gap: 24px;
+    }
+
+    .shop-container {
+        gap: 40px; /* Adiciona um espaço de 40px entre o shop-container e os outros elementos */
+    }
+}
+
+/* @media screen and (max-width: 556px) {
+    .card {
+        height: 100%;
+        width: 100%;
+        gap: 2px;
+    }
+} */
 
 .card:hover {
     transform: translateY(-5px); /* Deslocamento vertical para cima (levemente para frente) */
@@ -330,6 +466,7 @@ p {
     display: flex;
     text-align: left;
     justify-content: flex-start;
+    gap: 1.5rem;
     width: 84%;
     height: 100%;
 }
@@ -337,12 +474,11 @@ p {
 .text-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
+    
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     width: 35%;
-    background-color: var(--cor-grayfundo);
     border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -367,12 +503,41 @@ p {
     background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 500px) {
+    .text-container {
+        width: 60%;
+    }
+    .dog-container {
+        justify-content: flex-start;
+        width: 100%;
+        background-size: contain;
+    }
+
+    .adote-container {
+        min-height: 100vh;
+    }
+
+    .imagem-adt {
+        width: 100%;
+        max-height: 100%; 
+    }
+}
+
+@media screen and (max-width: 500px) {
+    p {
+        font-size: 2vw;
+    }
+
+    h2 {
+        font-size: 2.3vw;
+    }
+
+
+}
+
 .dog-container-info {
     padding: 8px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.7);
     width: 30%; /* Defina a largura desejada para o dog-container-info */
 }
-  
-
-

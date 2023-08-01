@@ -18,6 +18,7 @@ const data = {
       "nome": "Ragnar",
       "idade": "4 anos",
       "raca": "Vira-lata",
+
       "imagem": "ragnar.jpg"
     },
     {
@@ -58,6 +59,7 @@ function createCarousel(dogs) {
   });
 
   const flkty = new Flickity(imagemadt, {
+    cellAlign: 'left',
     contain: false,
     prevNextButtons: false,
     autoPlay: true,
@@ -66,4 +68,13 @@ function createCarousel(dogs) {
 
 // Chamando a função para criar o carrossel com base nos dados "data.cachorros"
 createCarousel(data.cachorros);
+
+// Adicione um evento de clique ao ícone do menu mobile
+const menuIcon = document.querySelector('.hamburger-icon');
+const menuMobile = document.querySelector('.menu-mobile');
+
+menuIcon.addEventListener('click', () => {
+    menuMobile.classList.toggle('active'); // Adicione a classe 'active' ao menu mobile para mostrá-lo quando o ícone for clicado
+});
+
 
