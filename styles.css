@@ -239,19 +239,6 @@ p {
     background-position: center;
 }
 
-@media screen and (max-width: 500px) {
-    .image-info {
-        display: none;
-    }
-
-    .info-container {
-        margin-top: 70px;
-    }
-
-}
-
-
-
 .more-info {
     display: flex;
     justify-content: flex-start;
@@ -262,9 +249,7 @@ p {
 
     font-family: 'Montserrat', sans-serif;
 
-    h3 {
-        font-size: small;
-    }
+    
    
 }
 
@@ -295,9 +280,17 @@ p {
     text-align: center;
 }
 
+
 .button-contain:hover {
     color: white;
     background-color: var(--cor-button);
+}
+
+@media screen and (max-width: 1160px) {
+    .button-contain {
+        font-size: 1.4vw;
+        width: 40%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -324,12 +317,34 @@ p {
     }
 }
 
-@media screen and (max-width: 1160px) {
-    .button-contain {
-        font-size: 1.4vw;
-        width: 40%;
+@media screen and (max-width: 500px) {
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
+
+    .image-info {
+        display: none;
+    }
+
+    .more-info {
+        width: 80%;
+    }
+
+    .text-div {
+        width: 100%;
+        font-size: 3vw;
+    }
+
+    .button-contain {
+        font-size: 3vw;
+        width: 70%;
+    }
+
+
 }
+
 
 
 .shop-container {
@@ -378,13 +393,13 @@ p {
     
 } */
 
-@media screen and (max-width: 456px) {
+/* @media screen and (max-width: 456px) {
     .button-contain {
         font-size: 2.2vw;
-        width: 34%;
+        
         height: 20%;
     }
-}
+} */
 
 
 
@@ -423,10 +438,12 @@ p {
     }
 
     /* Ajusta o tamanho dos botões dentro dos cards */
-    .button-contain {
+    .button-containAdot {
         font-size: 2vw;
-        width: 100%;
-        height: 15%;
+        padding: 0;
+        width: 50%;
+        height: 5%;
+        
     }
 
     /* Ajusta o tamanho da fonte no container de texto */
@@ -550,3 +567,60 @@ p {
     background-color: rgba(255, 255, 255, 0.7);
     width: 30%; /* Defina a largura desejada para o dog-container-info */
 }
+
+/* Ajustes para telas menores que 1200px */
+/* Ajustes para telas menores que 1200px */
+@media screen and (max-width: 1200px) {
+    .adote-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .container-ado {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-container {
+        width: 80%;
+        text-align: center;
+    }
+
+    .dog-container {
+        width: 100%;
+        height: 50vh; /* Ajuste a altura das imagens conforme desejado */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .imagem-adt {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .dog-container-info {
+        padding: 8px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 20%; 
+        position: absolute;
+        bottom: 20px;
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    p {
+        font-size: 3vw; /* Ajuste o valor conforme desejado */
+    }
+
+    h2 {
+        font-size: 3.3vw;
+    }
+}
+
+
