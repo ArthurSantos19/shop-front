@@ -70,11 +70,11 @@ function createCarousel(dogs) {
 createCarousel(data.cachorros);
 
 // Adicione um evento de clique ao ícone do menu mobile
-const menuIcon = document.querySelector('.hamburger-icon');
+const menuIcon = document.querySelector('.fa-bars');
 const menuMobile = document.querySelector('.menu-mobile');
 
 menuIcon.addEventListener('click', () => {
-    menuMobile.classList.toggle('active'); // Adicione a classe 'active' ao menu mobile para mostrá-lo quando o ícone for clicado
+    menuMobile.classList.toggle('active');
 });
 
 

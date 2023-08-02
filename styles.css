@@ -17,12 +17,6 @@ body {
     align-items: center;
 }
 
-/* @media screen and (max-width: 768px) {
-    body {
-        font-size: 1vh;
-    }
-} */
-
 /* Links */
 a {
     text-decoration: none;
@@ -74,14 +68,7 @@ p {
     --espacamento: 1rem;
 }
 
-/* Layout Responsivo */
-@media screen and (max-width: 768px) {
-/* Estilos para telas menores que 768 pixels */
-}
 
-@media screen and (max-width: 576px) {
-/* Estilos para telas menores que 576 pixels */
-}
 
 /* HEADER */
 .header {
@@ -96,6 +83,7 @@ p {
 
     display: flex;
     justify-content: space-around;
+    align-items: center;
     font-family: 'Montserrat', sans-serif;
     z-index: 999;
 }
@@ -131,13 +119,9 @@ p {
     color: #F7C6A1;
 }
 
-.hamburger-icon {
+.fa-bars {
+    font-size: 3.2vw;
     display: none;
-    cursor: pointer;
-    position: relative;
-    top: 50%;
-    right: 10px; 
-    transform: translateY(-50%);
 }
 
 .bar {
@@ -159,29 +143,48 @@ p {
    
 }
 
+@keyframes fadeInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media screen and (max-width: 760px) {
     /* Mostra o container com o ícone do menu mobile e o menu mobile quando a tela for menor que 760px */
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .fa-bars {
+        font-size: 7vw;
+        display: flex;
+    }
+
     .menu-mobile-container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        padding-bottom: 1rem;
+        cursor: pointer;
+        margin-top: 1.5rem;
+
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    /* Esconde o menu-container original quando a tela for menor que 760px */
     .menu-container {
         display: none;
     }
 
-    /* Mostra o ícone do menu mobile quando a tela for menor que 760px */
-    .hamburger-icon {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Adicione alinhamento vertical ao ícone */
-        justify-content: center; /* Adicione alinhamento horizontal ao ícone */
-        
-    }
-
-    /* Mostra o menu mobile quando a classe 'active' estiver presente */
     .menu-mobile.active {
         display: flex;
         justify-content: center;
@@ -190,15 +193,74 @@ p {
         padding: 1rem;
         border-radius: 8px;
         background-color: var(--cor-primaria);
+        width: 100vw;
+        min-height: 100%; /* Alteramos de 100vh para 100% */
+        animation: fadeInFromTop 0.5s ease;
+        overflow: hidden; /* Adicionamos overflow para esconder os itens que ultrapassarem o container */
     }
     .menu-mobile a:hover {
         color: var(--cor-secundaria);
     }
+
+    .menu-mobile a {
+        opacity: 0;
+        animation: none;
+    }
+
+
+    .menu-mobile.active a:nth-child(1) {
+        animation: fadeInFromTop 0.5s ease forwards;
+        animation-delay: 0.3s;
+    }
+    
+    .menu-mobile.active a:nth-child(2) {
+        animation: fadeInFromTop 0.5s ease forwards;
+        animation-delay: 0.5s;
+    }
+    
+    .menu-mobile.active a:nth-child(3) {
+        animation: fadeInFromTop 0.5s ease forwards;
+        animation-delay: 0.7s;
+    }
+    
+    .menu-mobile.active a:nth-child(4) {
+        animation: fadeInFromTop 0.5s ease forwards;
+        animation-delay: 0.9s;
+    }
+
+    .buttoncontato {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 34%;
+        height: 14%;
+        padding: 10px;
+        background-color: white;
+        color: var(--cor-button);
+        border: solid 1px var(--cor-button);
+        border-radius: 4px;
+        font-size: 2vw;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 22px;
+        text-align: center;
+    }
+
+    .buttoncontato:hover {
+        background-color: var(--cor-button);
+        color: white;
+    }
+
+    .icon-container {
+        display: none;
+        width: 24%;
+    }
 }
 
-@media screen and (max-width: 300px) {
-    .header {
-        gap: 4rem;
+@media screen and (max-width: 500px) {
+    .buttoncontato {
+        font-size: 3vw;
+        width: 60%;
     }
     
 }
@@ -376,31 +438,7 @@ p {
     width: 100%;
     max-width: 80%;
     height: 100%;
-    /* background-color: #ff9800; */
 }
-
-/* @media screen and (max-width: 776px) {
-    .container-card {
-        gap: 0;
-    }
-
-    .button-contain {
-        font-size: 1.7vw;
-        width: 40%;
-        height: 20%;
-    }
-
-    
-} */
-
-/* @media screen and (max-width: 456px) {
-    .button-contain {
-        font-size: 2.2vw;
-        
-        height: 20%;
-    }
-} */
-
 
 
 .card {
@@ -413,6 +451,30 @@ p {
     padding: 12px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
+}
+
+.button-containAdot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64%;
+    height: 14%;
+    padding: 10px;
+    background-color: white;
+    color: var(--cor-button);
+    border: solid 1px var(--cor-button);
+    border-radius: 4px;
+    font-size: 1vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 22px;
+    text-align: center;
+    
+}
+
+.button-containAdot:hover {
+    background-color: var(--cor-button);
+    color: white;
 }
 
 @media screen and (max-width: 1190px) {
@@ -437,18 +499,20 @@ p {
         gap: 12px;
     }
 
-    /* Ajusta o tamanho dos botões dentro dos cards */
-    .button-containAdot {
-        font-size: 2vw;
-        padding: 0;
-        width: 50%;
-        height: 5%;
-        
-    }
-
-    /* Ajusta o tamanho da fonte no container de texto */
     .text-container {
         width: 100%;
+    }
+
+    .button-containAdot {
+        font-size: 1.3vw;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .button-containAdot {
+        font-size: 2.8vw;
+        width: 50%;
     }
 }
 
