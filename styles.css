@@ -93,6 +93,7 @@ p {
     justify-content: center;
     align-items: center;
     font-size: 2em;
+    cursor: pointer;
 }
 
 .menu-container {
@@ -457,14 +458,14 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 64%;
+    width: 34%;
     height: 14%;
     padding: 10px;
     background-color: white;
     color: var(--cor-button);
     border: solid 1px var(--cor-button);
     border-radius: 4px;
-    font-size: 1vw;
+    font-size: 0.8vw;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 22px;
@@ -686,5 +687,83 @@ p {
         font-size: 3.3vw;
     }
 }
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-grayfundo);
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 5rem;
+    max-height: 40vh;
+}
+
+.about-content {
+    max-width: 86%;
+    text-align: center;
+    max-height: 40vh;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 1200px) {
+    .about-container {
+        flex-direction: column;
+        gap: var(--espacamento);
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1190px) {
+    .about-container {
+        margin-top: 6rem;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .about-container {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
 
 
