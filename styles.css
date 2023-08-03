@@ -78,7 +78,7 @@ p {
     left: 0;
     width: 100%;
     height: 8%;
-    background-color: #3c4a90;
+    background-color: var(--cor-primaria);
     color: #fff;
     padding: 14px;
 
@@ -292,7 +292,7 @@ p {
     align-items: center;
     width: 80%;
     height: 40vh;
-    margin-top: 12px;
+    
 }
 
 .image-info {
@@ -359,7 +359,8 @@ p {
 
 @media screen and (max-width: 768px) {
     .info-container {
-        flex-direction: column; 
+        flex-direction: column;
+        width: 100%;
     }
 
     .image-info {
@@ -393,7 +394,8 @@ p {
     }
 
     .more-info {
-        width: 80%;
+        width: 100%;
+        text-align: left;
     }
 
     .text-div {
@@ -420,7 +422,6 @@ p {
     width: 100%;
     max-width: 100%;
     height: 50vh;
-    margin-top: 50px;
 }
 
 .header-shop {
@@ -676,15 +677,7 @@ p {
     }
 }
 
-@media screen and (max-width: 500px) {
-    p {
-        font-size: 3vw;
-    }
 
-    h2 {
-        font-size: 3.3vw;
-    }
-}
 
 .about-container {
     display: flex;
@@ -703,7 +696,7 @@ p {
     max-height: 40vh;
     border-radius: 6px;
     background-color: var(--cor-fundtext);
-    padding: 18px;
+    padding: 2rem;
 }
 
 .about-content h2 {
@@ -725,11 +718,11 @@ p {
     }
 
     .about-content h2 {
-        font-size: 2rem;
+        font-size: 2.6vw;
     }
 
     .about-content p {
-        font-size: 1rem;
+        font-size: 1.4vw;
     }
 }
 
@@ -741,8 +734,13 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+    .about-content {
+        max-width: 100%;
+    }
+
     .about-content h2 {
         font-size: 1.8vw;
+        
     }
 
     .about-content p {
@@ -756,12 +754,13 @@ p {
 }
 
 @media screen and (max-width: 500px) {
+
     .about-content h2 {
-        font-size: 4vw;
+        font-size: 3.4vw;
     }
 
     .about-content p {
-        font-size: 3vw;
+        font-size: 2.8vw;
     }
 }
 
@@ -832,4 +831,14 @@ h3 {
         gap: 3rem;
     }
 
+}
+
+@media screen and (max-width: 500px) {
+    p {
+        font-size: 2.6vw;
+    }
+
+    h2 {
+        font-size: 3vw;
+    }
 }

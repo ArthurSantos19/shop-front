@@ -117,6 +117,7 @@ function createCarousel(dogs) {
     contain: false,
     prevNextButtons: false,
     autoPlay: true,
+    pageDots: false,
   });
 }
 
@@ -151,3 +152,8 @@ buttonSaibaMaisAdote.addEventListener('click', () => {
     const link = buttonSaibaMaisAdote.getAttribute('data-link');
     window.open(link, '_blank');
 });
+
+function abrirLink() {
+  const link = "https://wa.me/48992345678";
+  window.open(link, "_blank");
+}
