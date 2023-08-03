@@ -1,3 +1,62 @@
+const dataFilhotes = {
+  "filhotes": [
+    {
+      "raca": "Pastor Alemão",
+      "dias": "42 dias",
+      "imagem": "filhotepastor.jpg"
+    },
+    {
+      "raca": "Labrador",
+      "dias": "45 dias",
+      "imagem": "labrador.jpg"
+    },
+    {
+      "raca": "Pitbull Terrier",
+      "dias": "50 dias",
+      "imagem": "pitbullterrier.jpg"
+    },
+    {
+      "raca": "Golden Retriever",
+      "dias": "55 dias",
+      "imagem": "golden.jpg"
+      
+    }
+  ]
+};
+
+const containerCard = document.querySelector('.container-card');
+
+function createCard(filhote) {
+  const card = document.createElement('div');
+  card.classList.add('card');
+
+  const img = document.createElement('img');
+  img.src = `assets/${filhote.imagem}`;
+  img.alt = '';
+
+  const footer = document.createElement('footer');
+  footer.classList.add('footer-card');
+
+  const pRaca = document.createElement('p');
+  pRaca.textContent = filhote.raca;
+
+  const pDias = document.createElement('p');
+  pDias.textContent = filhote.dias;
+
+  footer.appendChild(pRaca);
+  footer.appendChild(pDias);
+
+  card.appendChild(img);
+  card.appendChild(footer);
+
+  containerCard.appendChild(card);
+}
+
+dataFilhotes.filhotes.forEach((filhote) => {
+  createCard(filhote);
+});
+
+
 const data = {
   "cachorros": [
     {

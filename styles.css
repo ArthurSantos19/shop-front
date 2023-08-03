@@ -453,7 +453,6 @@ p {
     height: 100%;
     padding: 12px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
 }
 
 .button-containAdot {
