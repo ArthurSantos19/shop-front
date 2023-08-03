@@ -635,8 +635,8 @@ p {
 @media screen and (max-width: 1200px) {
     .adote-container {
         flex-direction: column;
-        gap: 40px;
-        margin-bottom: 60px;
+        /* gap: 40px; */
+        margin-bottom: 80px;
     }
 
     .container-ado {
@@ -825,3 +825,11 @@ h3 {
 
 }
 
+
+
+@media screen and (max-width: 1200px) {
+    body {
+        gap: 3rem;
+    }
+
+}
