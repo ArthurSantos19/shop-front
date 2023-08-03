@@ -15,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
 }
 
 /* Links */
@@ -61,7 +62,7 @@ p {
 /* Variáveis CSS */
 :root {
     --cor-primaria:  #3c4a90;
-    --cor-secundaria: #ff9800;
+    --cor-secundaria: #F7C6A1;
     --cor-button: #6A5ACD;
     --cor-gray: #C0C0C0;
     --cor-grayfundo: #DCDCDC;
@@ -106,7 +107,7 @@ p {
 }
 
 .menu-container a:hover {
-    color: #F7C6A1;
+    color: var(--cor-secundaria);
 }
 
 .icon-container {
@@ -640,6 +641,7 @@ p {
     .adote-container {
         flex-direction: column;
         gap: 40px;
+        margin-bottom: 60px;
     }
 
     .container-ado {
@@ -691,6 +693,7 @@ p {
 
 .about-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     /* background-color: var(--cor-fundtext); */
@@ -701,23 +704,22 @@ p {
 }
 
 .about-content {
-    max-width: 66%;
+    max-width: 78%;
     /* margin-left: 1rem;
     margin-left: 1rem; */
     text-align: left;
     max-height: 40vh;
     border-radius: 6px;
     background-color: var(--cor-fundtext);
-    padding: 10px;
+    padding: 18px;
 }
 
 .about-content h2 {
-    font-size: 2.5rem;
+    font-size: 1.5vw;
 }
 
 .about-content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1vw;
 }
 
 @media screen and (max-width: 1200px) {
@@ -758,6 +760,7 @@ p {
     .about-container {
         margin-top: 0;
     }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -770,7 +773,63 @@ p {
     }
 }
 
+.footer {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cor-primaria);
+    color: white;
+}
 
+h3 {
+    font-size: 1vw; 
+}
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
 
+.social-links a:hover {
+    color: var(--cor-secundaria)
+}
+
+@media screen and (max-width: 1200px) {
+    h3 {
+        font-size: 1.6vw;
+    }
+
+    .footer p {
+        font-size: 1.2vw;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    h3 {
+        font-size: 2.2vw;
+    }
+
+    .footer p {
+        font-size: 1.9vw;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    h3 {
+        font-size: 2.6vw;
+    }
+
+    .footer p {
+        font-size: 1.9vw;
+    }
+
+}
 

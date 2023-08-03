@@ -1,4 +1,3 @@
-// Dados dos cachorros disponíveis para adoção
 const data = {
   "cachorros": [
     {
@@ -7,7 +6,6 @@ const data = {
       "raca": "Vira-lata",
       "imagem": "caramelocapapreta.jpg"
     },
-
     {
       "nome": "Marley",
       "idade": "1 ano",
@@ -18,7 +16,6 @@ const data = {
       "nome": "Ragnar",
       "idade": "4 anos",
       "raca": "Vira-lata",
-
       "imagem": "ragnar.jpg"
     },
     {
@@ -43,7 +40,7 @@ function createCarousel(dogs) {
     dogContainer.style.backgroundImage = `url(assets/${dog.imagem})`;
 
     const paragraphName = document.createElement("p");
-    paragraphName.textContent = `Nome: ${dog.nome}`
+    paragraphName.textContent = `Nome: ${dog.nome}`;
 
     const paragraphAge = document.createElement("p");
     paragraphAge.textContent = `Idade: ${dog.idade}`;
@@ -51,10 +48,8 @@ function createCarousel(dogs) {
     dogContainerInfo.appendChild(paragraphName);
     dogContainerInfo.appendChild(paragraphAge);
 
-    // Adicione dogContainerInfo como filho de dogContainer
     dogContainer.appendChild(dogContainerInfo);
 
-    // Adicione dogContainer como filho de imagemadt
     imagemadt.appendChild(dogContainer);
   });
 
@@ -66,15 +61,34 @@ function createCarousel(dogs) {
   });
 }
 
-// Chamando a função para criar o carrossel com base nos dados "data.cachorros"
 createCarousel(data.cachorros);
 
-// Adicione um evento de clique ao ícone do menu mobile
+function closeMenuMobile() {
+  menuMobile.classList.remove('active');
+}
+
+const linksMenuMobile = document.querySelectorAll('.menu-mobile a');
+linksMenuMobile.forEach(link => {
+  link.addEventListener('click', closeMenuMobile);
+});
+
 const menuIcon = document.querySelector('.fa-bars');
 const menuMobile = document.querySelector('.menu-mobile');
 
 menuIcon.addEventListener('click', () => {
-    menuMobile.classList.toggle('active');
+  menuMobile.classList.toggle('active');
 });
 
+const buttonSaibaMais = document.querySelector('.info-container .button-contain');
 
+buttonSaibaMais.addEventListener('click', () => {
+    const link = buttonSaibaMais.getAttribute('data-link');
+    window.open(link, '_blank');
+});
+
+const buttonSaibaMaisAdote = document.querySelector('.adote-container .button-containAdot');
+
+buttonSaibaMaisAdote.addEventListener('click', () => {
+    const link = buttonSaibaMaisAdote.getAttribute('data-link');
+    window.open(link, '_blank');
+});
